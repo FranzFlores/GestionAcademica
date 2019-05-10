@@ -45,7 +45,7 @@ AccountController.login = (req,res)=>{
     else{
       if(!account) res.status(404).send({ message: "No existe la cuenta" });
       else{
-        if (!helpers.matchPassword(req.body.password,account.password)) {
+        if (helpers.matchPassword(req.body.password,account.password)) {
           const token = jwt.sign({data:account},'gestionAcademica',{
             expiresIn: 604800
           });
@@ -53,7 +53,7 @@ AccountController.login = (req,res)=>{
             token: token,
             user:{
               id:account._id,
-              user: account.user,
+              user:account.user,
             } 
           });
         }else{
