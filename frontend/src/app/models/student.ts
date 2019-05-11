@@ -1,11 +1,11 @@
 import { Person } from './person';
 
 export class Account {
-    constructor(_id = '', school = '', graduation_grade= '', Person = new Person()) {
+    constructor(_id = '', school = '', graduation_grade= '', person = new Person()) {
         this._id = _id;
         this.school = school;
         this.graduation_grade = graduation_grade;
-        this.Person = Person;
+        this.Person = person;
     }
     
     _id: string;
