@@ -3,8 +3,6 @@ var mongoose = require('mongoose');
 var helpers = require('../lib/helpers');
 var jwt = require('jsonwebtoken');
 
-
-
 var Person = require('../models/person.model');
 var Account = require('../models/account.model');
 
@@ -39,7 +37,6 @@ AccountController.update_password = (req, res) => {
 };
 
 AccountController.login = (req,res)=>{
-  console.log(req.body);
    Account.findOne({user:req.body.user},(err,account)=>{
     if(err) res.status(500).send({ message: "Error en la peticion" });
     else{
@@ -63,5 +60,7 @@ AccountController.login = (req,res)=>{
     }
    });
 };
+
+
 
 module.exports = AccountController;

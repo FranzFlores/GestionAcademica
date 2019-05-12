@@ -33,6 +33,7 @@ app.use(session({
 app.use('/api/person', require('./routes/person.route'));
 app.use('/api/account', require('./routes/account.route'));
 
+
 // starting the server
 app.listen(app.get('port'), () => {
     console.log(`server on port ${app.get('port')}`);
