@@ -57,7 +57,7 @@ SubjectController.delete_subject = (req, res) => {
     });
 }
 
-SubjectController.all_subject = (req, res) => {
+SubjectController.all_subjects = (req, res) => {
     var subjects = Subject.find({status:true});
     subjects.populate({ path: 'career' }).exec((err, subjects) => {
         if (err) res.status(500).send("Error");
@@ -68,6 +68,4 @@ SubjectController.all_subject = (req, res) => {
     });
 }
 
-module.exports = {
-    SubjectController
-};
+module.exports = SubjectController;

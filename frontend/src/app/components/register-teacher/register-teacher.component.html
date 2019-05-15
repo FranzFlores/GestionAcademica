@@ -5,6 +5,7 @@
           <div class="card-content">
             <div class="row">
                     <form class="col s12" #teacherForm="ngForm" (ngSubmit)="addTeacher(teacherForm)">
+                        <input type="text" hidden name="role" value="teacher" #role="ngModel" [(ngModel)]="teacherService.teacher.role" >
                       <div class="row">
                         <div class="input-field col s12">
                           <input placeholder="Ingrese Número de Cédula" required #dni="ngModel" [(ngModel)]="teacherService.teacher.dni" id="dni" type="text" name="dni" class="validate">

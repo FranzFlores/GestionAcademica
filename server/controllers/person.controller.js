@@ -20,6 +20,7 @@ PersonController.create_person = (req, res) => {
         if (err) res.status(500).send('Error');
         else if (personResult) res.status(200).send('Login');
         else {
+            console.log(req.body);
             new Person({
                 dni_person: req.body.dni,
                 name: req.body.name,

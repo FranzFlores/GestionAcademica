@@ -66,6 +66,4 @@ CurriculumController.all_curriculum = (req, res) => {
     });
 }
 
-module.exports = {
-    CurriculumController
-};
+module.exports = CurriculumController;

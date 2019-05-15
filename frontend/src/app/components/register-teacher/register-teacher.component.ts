@@ -30,7 +30,7 @@ export class RegisterTeacherComponent implements OnInit {
     this.teacherService.postTeacher(form.value)
       .subscribe(res => {
         this.router.navigate(['/login']);
-        M.toast({html: 'Save successfully'});
+        M.toast({html: 'Se ha guardado con exito'});
       });
   }
 

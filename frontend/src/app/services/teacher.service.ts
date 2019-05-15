@@ -9,7 +9,7 @@ import {Teacher} from "../models/teacher";
 })
 export class TeacherService {
 
-  //person : Person;
+ 
   teacher : Teacher;
 
   readonly URL_API = 'http://localhost:3000/api/person';

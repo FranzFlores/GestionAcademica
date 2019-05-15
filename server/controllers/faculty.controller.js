@@ -68,6 +68,5 @@ FacultyController.all_faculty = (req, res) => {
 }
 
 
-module.exports = {
-    FacultyController
-};
+module.exports = FacultyController;
+

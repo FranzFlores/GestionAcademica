@@ -2,23 +2,24 @@
         <div class="card">
           <h3 class="center-align title">Registro de Estudiante</h3>
           <div class="card-content">
-            <div class="row">
-                    <form #teacherForm="ngForm" class="col s12">
+            <div class="row"> 
+                    <form #studentForm="ngForm" (ngSubmit)="addStudent(studentForm)" class="col s12">
+                      <input type="text" hidden name="role" value="student" #role="ngModel" [(ngModel)]="studentService.student.role">
                       <div class="row">
                         <div class="input-field col s12">
-                          <input placeholder="Ingrese Número de Cédula" id="dni" type="text" name="dni" class="validate">
+                          <input placeholder="Ingrese Número de Cédula" required #dni="ngModel" [(ngModel)]="studentService.student.dni" id="dni" type="text" name="dni" class="validate">
                           <label for="dni">Cédula</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input placeholder="Ingrese Nombres y Apellidos" id="name" type="text" name="name" class="validate">
+                          <input placeholder="Ingrese Nombres y Apellidos" #name="ngModel" [(ngModel)]="studentService.student.name" id="name" type="text" name="name" class="validate">
                           <label for="name">Nombres y Apellidos</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <select>
+                          <select name="gender" #gender="ngModel" [(ngModel)]="studentService.student.gender">
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                           </select>
@@ -27,49 +28,48 @@
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input type="text" name="birthday" class="datepicker">
+                          <input type="text" name="birthday" #birthday="ngModel" [(ngModel)]="studentService.student.birthday" class="datepicker">
                           <label for="name">Fecha de Nacimiento</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="institutional_mail" placeholder="Ingrese su Correo Institucional" type="email" name="institutional_mail" class="validate">
+                          <input id="institutional_mail" placeholder="Ingrese su Correo Institucional" type="email" #institutional_mail ="ngModel" [(ngModel)]="studentService.student.institutional_mail" placeholder="Ingrese su Correo Institucional" name="institutional_mail" class="validate">
                           <label for="email">Correo Institucional</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="personal_mail" type="email" placeholder="Ingrese su Correo Personal" name="personal_mail" class="validate">
+                          <input id="personal_mail" type="email" #personal_mail ="ngModel" [(ngModel)]="studentService.student.personal_mail" placeholder="Ingrese su Correo Personal" name="personal_mail" class="validate">
                           <label for="email">Correo Personal</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="address" type="text" name="address" placeholder="Ingrese su dirección" class="validate">
+                          <input id="address" type="text" #address="ngModel" [(ngModel)]="studentService.student.address" name="address" placeholder="Ingrese su dirección" class="validate">
                           <label for="address">Dirección</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="phone" type="text" name="phone" placeholder="Ingrese su telefono" class="validate">
+                          <input id="phone" type="text" name="phone" #phone="ngModel" [(ngModel)]="studentService.student.phone" placeholder="Ingrese su telefono" class="validate">
                           <label for="phone">Telefono</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="school" type="text" name="school" placeholder="Ingrese el Colegio" class="validate">
+                          <input id="school" type="text" name="school" #school="ngModel" [(ngModel)]="studentService.student.school" placeholder="Ingrese el Colegio" class="validate">
                           <label for="university_degree">Colegio</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="graduation_grade" type="text" name="graduation_grade" placeholder="Ingrese Nota de Graduación" class="validate">
+                          <input id="graduation_grade" type="text" name="graduation_grade" #graduation_grade="ngModel" [(ngModel)]="studentService.student.graduation_grade" placeholder="Ingrese Nota de Graduación" class="validate">
                           <label for="graduation_grade">Nota de Graduación de Bachiller</label>
                         </div>
                       </div>
                       <div class="card-action">
                         <div class="input-field col-s12 center-align">
-                          <button class="btn blue lighten-1">Limpiar</button>
                           <button class="btn blue lighten-1">Guardar</button>
                         </div>
                       </div>

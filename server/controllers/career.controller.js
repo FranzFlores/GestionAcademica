@@ -72,6 +72,4 @@ CareerController.all_career = (req, res) => {
     });
 }
 
-module.exports = {
-    CareerController
-};
+module.exports = CareerController;
