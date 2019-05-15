@@ -4,22 +4,22 @@
           <h3 class="center-align title">Registro de Docente</h3>
           <div class="card-content">
             <div class="row">
-                    <form class="col s12" #teacherForm="ngForm">
+                    <form class="col s12" #teacherForm="ngForm" (ngSubmit)="addTeacher(teacherForm)">
                       <div class="row">
                         <div class="input-field col s12">
-                          <input placeholder="Ingrese Número de Cédula" id="dni" type="text" name="dni" class="validate">
+                          <input placeholder="Ingrese Número de Cédula" required #dni="ngModel" [(ngModel)]="teacherService.teacher.dni" id="dni" type="text" name="dni" class="validate">
                           <label for="dni">Cédula</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input placeholder="Ingrese Nombres y Apellidos" id="name" type="text" name="name" class="validate">
+                          <input placeholder="Ingrese Nombres y Apellidos" #name="ngModel" [(ngModel)]="teacherService.teacher.name" id="name" type="text" name="name" class="validate">
                           <label for="name">Nombres y Apellidos</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <select>
+                          <select name="gender" #gender="ngModel" [(ngModel)]="teacherService.teacher.gender">
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option>
                           </select>
@@ -28,56 +28,55 @@
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input type="text" name="birthday" class="datepicker">
+                          <input type="text" name="birthday" #birthday="ngModel" [(ngModel)]="teacherService.teacher.birthday" class="datepicker">
                           <label for="name">Fecha de Nacimiento</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="institutional_mail" placeholder="Ingrese su Correo Institucional" type="email" name="institutional_mail" class="validate">
+                          <input id="institutional_mail" #institutional_mail ="ngModel" [(ngModel)]="teacherService.teacher.institutional_mail" placeholder="Ingrese su Correo Institucional" type="email" name="institutional_mail" class="validate">
                           <label for="email">Correo Institucional</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="personal_mail" type="email" placeholder="Ingrese su Correo Personal" name="personal_mail" class="validate">
+                          <input id="personal_mail" type="email" #personal_mail ="ngModel" [(ngModel)]="teacherService.teacher.personal_mail" placeholder="Ingrese su Correo Personal" name="personal_mail" class="validate">
                           <label for="email">Correo Personal</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="address" type="text" name="address" placeholder="Ingrese su dirección" class="validate">
+                          <input id="address" type="text" name="address"  #address="ngModel" [(ngModel)]="teacherService.teacher.address" placeholder="Ingrese su dirección" class="validate">
                           <label for="address">Dirección</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="phone" type="text" name="phone" placeholder="Ingrese su telefono" class="validate">
+                          <input id="phone" type="text" name="phone"  #phone="ngModel" [(ngModel)]="teacherService.teacher.phone" placeholder="Ingrese su telefono" class="validate">
                           <label for="phone">Telefono</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="university_degree" type="text" name="university_degree" placeholder="Ingrese su Título Universitario" class="validate">
+                          <input id="university_degree" type="text" #university_degree="ngModel" [(ngModel)]="teacherService.teacher.university_degree" name="university_degree" placeholder="Ingrese su Título Universitario" class="validate">
                           <label for="university_degree">Título Universitario</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="fourth_level_degree" type="text" name="fourth_level_degree" placeholder="Ingrese su Título Cuarto Nivel" class="validate">
+                          <input id="fourth_level_degree" type="text" #fourth_level_degree="ngModel" [(ngModel)]="teacherService.teacher.fourth_level_degree" name="fourth_level_degree" placeholder="Ingrese su Título Cuarto Nivel" class="validate">
                           <label for="university_degree">Título Cuarto Nivel</label>
                         </div>
                       </div>
                       <div class="row">
                         <div class="input-field col s12">
-                          <input id="timetable" type="text" name="timetable" placeholder="Ingrese su horario de Atención" class="validate">
+                          <input id="timetable" type="text" #timetable="ngModel" [(ngModel)]="teacherService.teacher.timetable" name="timetable" placeholder="Ingrese su horario de Atención" class="validate">
                           <label for="university_degree">Horario de Atención</label>
                         </div>
                       </div>
                       <div class="card-action">
                         <div class="input-field col-s12 center-align">
-                          <button class="btn #42a5f5 blue lighten-1">Limpiar Formulario</button>
-                          <button class="btn #42a5f5 blue lighten-1">Guardar</button>
+                          <button class="btn  blue lighten-1">Guardar</button>
                         </div>
                       </div>
                     </form>

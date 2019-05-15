@@ -1,7 +1,7 @@
-import { Person } from './person';
+// import { Person } from './person';
 
 export class Teacher {
-    constructor(dni_person = '', name = '',gender = '',birthday = '', institutional_mail = '',personal_mail = '',address='',phone='',_id = '', university_degree = '', fourth_level_degree= '',timetable='', person = new Person()) {
+    constructor(dni_person = '', name = '',gender = '',birthday = '', institutional_mail = '',personal_mail = '',address='',phone='',_id = '', university_degree = '', fourth_level_degree= '',timetable='') {
         this._id = _id;
         this.dni_person = dni_person;
         this.name = name;
@@ -14,7 +14,7 @@ export class Teacher {
         this.university_degree = university_degree;
         this.fourth_level_degree = fourth_level_degree;
         this.timetable = timetable;
-        this.Person = person;
+        //this.Person = person;
     }
     
     _id: string;
@@ -29,5 +29,5 @@ export class Teacher {
     university_degree: string;
     fourth_level_degree: string;
     timetable:String;
-    Person: Person;
+    // Person: Person;
 }
