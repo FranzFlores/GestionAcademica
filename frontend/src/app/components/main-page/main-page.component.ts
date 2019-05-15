@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  }
+
+  teacherRegister(){
+    this.router.navigate(['/register-teacher']);
+  }
+
+  studentRegister(){
+    this.router.navigate(['/register-student']);
+  }
+
+  login(){
+    this.router.navigate(['/login']);
   }
 
 }
