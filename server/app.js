@@ -9,6 +9,7 @@ const person = require('./models/person.model');
 const student = require('./models/student.model');
 const teacher = require('./models/teacher.model');
 
+
 //Inicializaciones
 const app = express();
 require('./config/passport')(passport,account,person,student,teacher);
@@ -32,6 +33,12 @@ app.use(session({
 // Routes
 app.use('/api/person', require('./routes/person.route'));
 app.use('/api/account', require('./routes/account.route'));
+
+//rutas AO
+app.use('api/faculty', require('./routes/faculty.route'));
+app.use('api/career', require('./routes/career.route'));
+app.use('api/curriculum', require('./routes/curriculum.route'));
+app.use('api/subject', require('./routes/subject.route'));
 
 
 // starting the server
