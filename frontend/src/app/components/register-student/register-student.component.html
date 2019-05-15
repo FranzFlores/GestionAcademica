@@ -1,0 +1,80 @@
+<div class="container">
+        <div class="card">
+          <h3 class="center-align title">Registro de Estudiante</h3>
+          <div class="card-content">
+            <div class="row">
+                    <form #teacherForm="ngForm" class="col s12">
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input placeholder="Ingrese Número de Cédula" id="dni" type="text" name="dni" class="validate">
+                          <label for="dni">Cédula</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input placeholder="Ingrese Nombres y Apellidos" id="name" type="text" name="name" class="validate">
+                          <label for="name">Nombres y Apellidos</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <select>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                          </select>
+                          <label>Seleccione Género</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input type="text" name="birthday" class="datepicker">
+                          <label for="name">Fecha de Nacimiento</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="institutional_mail" placeholder="Ingrese su Correo Institucional" type="email" name="institutional_mail" class="validate">
+                          <label for="email">Correo Institucional</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="personal_mail" type="email" placeholder="Ingrese su Correo Personal" name="personal_mail" class="validate">
+                          <label for="email">Correo Personal</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="address" type="text" name="address" placeholder="Ingrese su dirección" class="validate">
+                          <label for="address">Dirección</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="phone" type="text" name="phone" placeholder="Ingrese su telefono" class="validate">
+                          <label for="phone">Telefono</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="school" type="text" name="school" placeholder="Ingrese el Colegio" class="validate">
+                          <label for="university_degree">Colegio</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="graduation_grade" type="text" name="graduation_grade" placeholder="Ingrese Nota de Graduación" class="validate">
+                          <label for="graduation_grade">Nota de Graduación de Bachiller</label>
+                        </div>
+                      </div>
+                      <div class="card-action">
+                        <div class="input-field col-s12 center-align">
+                          <button class="btn blue lighten-1">Limpiar</button>
+                          <button class="btn blue lighten-1">Guardar</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+          </div>
+        </div>
+        </div>
